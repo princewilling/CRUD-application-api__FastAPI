@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
-from . import models
-from .database import engine, get_db
+from .db import models
+from .db.database import engine, get_db
 from sqlalchemy.orm import Session
 from .routers import user, post, auth, vote
 from .config import settings
@@ -15,7 +15,7 @@ origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

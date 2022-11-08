@@ -1,7 +1,11 @@
 from sqlalchemy import func
-from .. import models, schemas, oauth2
+
+from ..schema import schemas
+
+from ..db import models
+from ..auth import oauth2
 from fastapi import Depends, Response, status, HTTPException, APIRouter
-from ..database import get_db
+from ..db.database import get_db
 from sqlalchemy.orm import Session
 from typing import List, Optional
 

@@ -2,10 +2,12 @@ from pyexpat import model
 from fastapi import Depends, HTTPException, status
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-from . import schemas, database, models
+
+from .db import database, models
+from .schema import schemas
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from .config import settings
+from ..config import settings
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")

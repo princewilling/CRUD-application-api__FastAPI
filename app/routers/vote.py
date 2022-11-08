@@ -1,7 +1,11 @@
 from multiprocessing import synchronize
 from fastapi import FastAPI, Depends, Response, status, HTTPException, APIRouter
 from requests import Session
-from .. import schemas, database, models, oauth2
+
+from ..schema import schemas
+
+from ..db import database, models
+from ..auth import oauth2
 router = APIRouter(
     prefix="/vote",
     tags=['Votes']
