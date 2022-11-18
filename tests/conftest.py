@@ -9,7 +9,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from app.auth.oauth2 import create_access_token
 from app.db import models
 
-SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name} test"
+#SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name} test"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/db_test"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
