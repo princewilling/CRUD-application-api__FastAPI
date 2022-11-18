@@ -38,7 +38,7 @@ def test_post(db: Session = Depends(get_db)):
 
 @app.get("/")
 async def root():
-    return{"message": "welcome to my api"}
+    return{"message": "Welcome to my API, I wrote it out of love for you"}
 
 
 
