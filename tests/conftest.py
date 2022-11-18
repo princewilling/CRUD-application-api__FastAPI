@@ -28,6 +28,29 @@ Testing_SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engi
 #client = TestClient(app)
 
 @pytest.fixture
+def session():
+    Base.metadata.drop_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
+    
+    db = Testing_SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+@pytest.fixture
+def client(session):
+    def override_get_db():
+        try:
+            yield session
+        finally:
+            session.close()
+            
+    app.dependency_overrides[get_db] = override_get_db
+    yield TestClient(app)
+
+
+@pytest.fixture
 def test_user(client):
     user_data={"email": "local@gmail.com", 
                "password": "1234"}
@@ -49,30 +72,7 @@ def test_user2(client):
 
     new_user = res.json()
     new_user['password'] = user_data['password']
-    return new_user
-
-@pytest.fixture
-def session():
-    Base.metadata.drop_all(bind=engine)
-    Base.metadata.create_all(bind=engine)
-    
-    db = Testing_SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
-@pytest.fixture
-def client(session):
-    def override_get_db():
-        try:
-            yield session
-        finally:
-            session.close()
-            
-    app.dependency_overrides[get_db] = override_get_db
-    yield TestClient(app)
-    
+    return new_user    
     
 @pytest.fixture
 def token(test_user):
