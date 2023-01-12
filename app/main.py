@@ -7,7 +7,7 @@ from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
 
-# models.Base.metadata.create_all(bind=engine) we now have alembic 
+# models.Base.metadata.create_all(bind=engine) we now have alembic
 
 app = FastAPI()
 
@@ -19,7 +19,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)        
+)
 
 app.include_router(post.router)
 
@@ -29,17 +29,15 @@ app.include_router(auth.router)
 
 app.include_router(vote.router)
 
+
 @app.get("/sqlalchemy")
 def test_post(db: Session = Depends(get_db)):
-    
+
     posts = db.query(models.Post).all()
     print(posts)
     return {"data": posts}
 
+
 @app.get("/")
 async def root():
-    return{"message": "Welcome to my API, I wrote it out of love for you"}
-
-
-
-
+    return {"message": "Welcome to my API, I wrote it out of love for you"}
