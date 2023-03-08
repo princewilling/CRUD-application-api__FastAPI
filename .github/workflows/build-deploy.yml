@@ -53,7 +53,7 @@ jobs:
         run: |
           make install
 
-      - name: Format with black
+      - name: Format with black8
         run: |
           make format
 
