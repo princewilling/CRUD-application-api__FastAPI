@@ -7,7 +7,7 @@ from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
 
-# models.Base.metadata.create_all(bind=engine) we now have alembic
+# models.Base.metadata.create_all(bind=engine) #we now have alembic
 
 app = FastAPI()
 
