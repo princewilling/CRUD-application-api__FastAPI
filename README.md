@@ -38,6 +38,8 @@
 
 ### Get User
 
+    :unlock:
+
     curl --request GET \
     --url http://127.0.0.1:8000/users/1
 
@@ -49,6 +51,8 @@
         }
 
 ### Create Post
+
+    :closed_lock_with_key:
 
     curl --request POST \
     --url http://127.0.0.1:8000/posts/ \
@@ -75,6 +79,8 @@
         }
 
 ### Get Posts
+
+    :closed_lock_with_key:
 
     curl --request GET \
     --url http://127.0.0.1:8000/posts/ \
@@ -134,6 +140,8 @@
 
 ### Get Post(s) (With Query Param)
 
+    :closed_lock_with_key:
+
     curl --request GET \
     --url 'http://127.0.0.1:8000/posts/?limit=1&search=Days' \
     --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwNTE2ODB9.dwP_Aw7eVaNP1fnAi4ZvYul8owO4YnUmXdAEAx98eNw'
@@ -161,6 +169,8 @@
 
 ### Get Single Post
 
+    :closed_lock_with_key:
+
     curl --request GET \
     --url http://127.0.0.1:8000/posts/3 \
     --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwNTE2ODB9.dwP_Aw7eVaNP1fnAi4ZvYul8owO4YnUmXdAEAx98eNw'
@@ -185,6 +195,8 @@
         }
 
 ### Update Post
+
+    :closed_lock_with_key:
 
     curl --request PUT \
     --url http://127.0.0.1:8000/posts/1 \
@@ -212,6 +224,8 @@
 
 ### Delete Post
 
+    :closed_lock_with_key:
+
     curl --request DELETE \
     --url http://127.0.0.1:8000/posts/4 \
     --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwNTM5NjJ9.A4pPQltzAFZFxkHi_8COeId3Jxm9Yrot6Tm47bv1sVU'
@@ -220,6 +234,8 @@
         status code: 204
 
 ### Up Vote a Post
+
+    :closed_lock_with_key:
 
     curl --request POST \
     --url http://127.0.0.1:8000/vote \
@@ -236,6 +252,8 @@
         }
 
 ### Remove Up Vote on Post
+
+    :closed_lock_with_key:
 
     curl --request POST \
     --url http://127.0.0.1:8000/vote \
