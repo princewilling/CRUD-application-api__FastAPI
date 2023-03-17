@@ -1,8 +1,9 @@
 from pydantic import BaseSettings, Field
 
+
 class Settings(BaseSettings):
 
-    database_name:str = Field(..., env='DATABASE_NAME')
+    database_name: str = Field(..., env="DATABASE_NAME")
     database_hostname: str
     database_port: str
     database_password: str
