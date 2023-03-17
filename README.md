@@ -37,7 +37,7 @@
         }
 
 ### Get User
-:unlock:
+:unlock:    *! does not require authentication*
 
     curl --request GET \
     --url http://127.0.0.1:8000/users/1
@@ -50,7 +50,7 @@
         }
 
 ### Create Post
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request POST \
     --url http://127.0.0.1:8000/posts/ \
@@ -77,7 +77,7 @@
         }
 
 ### Get Posts
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request GET \
     --url http://127.0.0.1:8000/posts/ \
@@ -136,7 +136,7 @@
         ]
 
 ### Get Post(s) (With Query Param)
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request GET \
     --url 'http://127.0.0.1:8000/posts/?limit=1&search=Days' \
@@ -164,7 +164,7 @@
         ]
 
 ### Get Single Post
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request GET \
     --url http://127.0.0.1:8000/posts/3 \
@@ -190,7 +190,7 @@
         }
 
 ### Update Post
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request PUT \
     --url http://127.0.0.1:8000/posts/1 \
@@ -217,7 +217,7 @@
         }
 
 ### Delete Post
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request DELETE \
     --url http://127.0.0.1:8000/posts/4 \
