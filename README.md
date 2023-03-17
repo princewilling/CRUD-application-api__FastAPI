@@ -227,7 +227,7 @@
         status code: 204
 
 ### Up Vote a Post
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request POST \
     --url http://127.0.0.1:8000/vote \
@@ -244,7 +244,7 @@
         }
 
 ### Remove Up Vote on Post
-:closed_lock_with_key:
+:closed_lock_with_key:      *! does require authentication*
 
     curl --request POST \
     --url http://127.0.0.1:8000/vote \
