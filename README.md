@@ -37,8 +37,7 @@
         }
 
 ### Get User
-
-    :unlock:
+:unlock:
 
     curl --request GET \
     --url http://127.0.0.1:8000/users/1
