@@ -6,7 +6,7 @@
 
 ## How To Run
 
-### 1. User Sign UP
+### User Sign UP
 
     curl --request POST \
     --url http://localhost:8000/users \
@@ -22,7 +22,7 @@
         "created_at": "2023-03-17T09:34:33.277682+00:00"
         }
 
-### 2. User Log IN
+### User Log IN
 
     curl --request POST \
     --url http://localhost:8000/login \
@@ -36,7 +36,7 @@
         "token_type": "bearer"
         }
 
-### 3. Get User
+### Get User
 
     curl --request GET \
     --url http://127.0.0.1:8000/users/1
@@ -48,7 +48,7 @@
         "created_at": "2023-03-16T21:10:02.120403+00:00"
         }
 
-### 4. Create Post
+### Create Post
 
     curl --request POST \
     --url http://127.0.0.1:8000/posts/ \
@@ -74,7 +74,7 @@
             }
         }
 
-### 4. Get Posts
+### Get Posts
 
     curl --request GET \
     --url http://127.0.0.1:8000/posts/ \
@@ -132,7 +132,7 @@
             }
         ]
 
-### 5. Get Post(s) (With Query Param)
+### Get Post(s) (With Query Param)
 
     curl --request GET \
     --url 'http://127.0.0.1:8000/posts/?limit=1&search=Days' \
@@ -159,7 +159,7 @@
             }
         ]
 
-### 6. Get Single Post
+### Get Single Post
 
     curl --request GET \
     --url http://127.0.0.1:8000/posts/3 \
@@ -184,7 +184,7 @@
         "votes": 0
         }
 
-### 7. Update Post
+### Update Post
 
     curl --request PUT \
     --url http://127.0.0.1:8000/posts/1 \
@@ -210,7 +210,7 @@
             }
         }
 
-### 8. Delete Post
+### Delete Post
 
     curl --request DELETE \
     --url http://127.0.0.1:8000/posts/4 \
@@ -219,7 +219,7 @@
     output:
         status code: 204
 
-### 9. Up Vote a Post
+### Up Vote a Post
 
     curl --request POST \
     --url http://127.0.0.1:8000/vote \
@@ -235,7 +235,7 @@
             "message": "successfully added vote"
         }
 
-### 10. Remove Up Vote on Post
+### Remove Up Vote on Post
 
     curl --request POST \
     --url http://127.0.0.1:8000/vote \
