@@ -1,6 +1,6 @@
-# CRUD_application_api__FastAPI
-
 [![Build and Deploy Code](https://github.com/princewilling/CRUD_application_api__FastAPI/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/princewilling/CRUD_application_api__FastAPI/actions/workflows/build-deploy.yml)
+
+# CRUD_application_api__FastAPI
 
 ## Core functionality
 
@@ -34,6 +34,8 @@ Create and Activate a virtual env on your machine
 EXECUTE: `pip install -r requirements.txt` to install dependencies
 
 EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api application
+
+## API Endpoints
 
 ### User Sign UP
 
