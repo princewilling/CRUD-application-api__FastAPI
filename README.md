@@ -14,7 +14,7 @@
 
 ## How To Run
 
-REQUIRES: Docker and Docker Compose
+Requires; Docker and Docker Compose
 
 It would be benificial if you're conversant with using docker and docker compose.
 
@@ -23,9 +23,11 @@ It would be benificial if you're conversant with using docker and docker compose
 
 To make the api easy to run and accessible, docker and docker-compose is used. Docker allows to build, test, and deploy applications quickly. Compose is a tool for defining and running multi-container Docker applications(the api app and postgres db in this case). Check the `Dockerfile` and `docker-compose-*.yml` to gain more insight.
 
-EXECUTE `$ docker compose --file docker-compose-dev.yml build` to build the docker image for the api
+EXECUTE `$ docker compose --file docker-compose-*.yml build` to build the docker image for the api
 
-EXECUTE `$ docker compose --file docker-compose-dev.yml up` to spin the api containter and postgres container
+EXECUTE `$ docker compose --file docker-compose-*.yml up` to spin-up the api containter and postgres container
+
+EXECUTE `$ docker compose --file docker-compose-*.yml down` to stop and romove running containers
 
 To run without docker;
 
