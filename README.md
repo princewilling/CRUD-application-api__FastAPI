@@ -7,20 +7,24 @@
 ## How To Run
 
 REQUIRES: Docker and Docker Compose
+
 It would be benificial if you're conversant with using docker and docker compose.
 
-Install Docker: <https://docs.docker.com/engine/install/>
-Install Docker Compose: <https://docs.docker.com/compose/install/>
+- Install Docker: <https://docs.docker.com/engine/install/>
+- Install Docker Compose: <https://docs.docker.com/compose/install/>
 
 To make the api easy to run and accessible, docker and docker-compose is used. Docker allows to build, test, and deploy applications quickly. Compose is a tool for defining and running multi-container Docker applications(the api app and postgres db in this case). Check the `Dockerfile` and `docker-compose-*.yml` to gain more insight.
 
 EXECUTE `$ docker compose --file docker-compose-dev.yml build` to build the docker image for the api
+
 EXECUTE `$ docker compose --file docker-compose-dev.yml up` to spin the api containter and postgres container
 
 To run without docker;
 
 Create and Activate a virtual env on your machine
+
 EXECUTE: `pip install -r requirements.txt` to install dependencies
+
 EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api application
 
 ### User Sign UP
