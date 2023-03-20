@@ -4,6 +4,14 @@
 
 ## Core functionality
 
+- User Auth
+- Create Post
+- Read Post
+- Update Post
+- Delete Post
+- UpVote and DownVote Post
+- Comment on Post
+
 ## How To Run
 
 REQUIRES: Docker and Docker Compose
