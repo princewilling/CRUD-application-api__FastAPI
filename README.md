@@ -17,7 +17,7 @@ To make the api easy to run and accessible, docker and docker-compose is used. D
 EXECUTE `$ docker compose --file docker-compose-dev.yml build` to build the docker image for the api
 EXECUTE `$ docker compose --file docker-compose-dev.yml up` to spin the api containter and postgres container
 
-To run with out docker;
+To run without docker;
 
 Create and Activate a virtual env on your machine
 EXECUTE: `pip install -r requirements.txt` to install dependencies
@@ -54,6 +54,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         }
 
 ### Get User
+
 :unlock:    *! does not require authentication*
 
     curl --request GET \
@@ -67,6 +68,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         }
 
 ### Create Post
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request POST \
@@ -94,6 +96,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         }
 
 ### Get Posts
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request GET \
@@ -153,6 +156,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         ]
 
 ### Get Post(s) (With Query Param)
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request GET \
@@ -181,6 +185,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         ]
 
 ### Get Single Post
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request GET \
@@ -207,6 +212,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         }
 
 ### Update Post
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request PUT \
@@ -234,6 +240,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         }
 
 ### Delete Post
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request DELETE \
@@ -244,6 +251,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         status code: 204
 
 ### Up Vote a Post
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request POST \
@@ -261,6 +269,7 @@ EXECUTE: `uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload` to start api
         }
 
 ### Remove Up Vote on Post
+
 :closed_lock_with_key:      *! does require authentication*
 
     curl --request POST \
