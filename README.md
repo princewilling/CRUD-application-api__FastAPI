@@ -1,6 +1,6 @@
 [![Build and Deploy Code](https://github.com/princewilling/CRUD_application_api__FastAPI/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/princewilling/CRUD_application_api__FastAPI/actions/workflows/build-deploy.yml)
 
-# CRUD_application_api__FastAPI
+# CRUD API with FastAPI
 
 ## Core functionality
 
